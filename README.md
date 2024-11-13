@@ -3,6 +3,15 @@
 [![Test Status](https://github.com/novnc/noVNC/workflows/Test/badge.svg)](https://github.com/novnc/noVNC/actions?query=workflow%3ATest)
 [![Lint Status](https://github.com/novnc/noVNC/workflows/Lint/badge.svg)](https://github.com/novnc/noVNC/actions?query=workflow%3ALint)
 
+### ESM Fork
+This fork is an ESM (ECMAScript Module) version of noVNC. Using ESM allows for better tree-shaking and improved performance in modern web bundlers. The main repository can not be installed through npm due to settings in the package.json, but this fork can.
+
+rfb.js is the main entry point in package.json. It exports the RFB class which can be imported and used in your ESM project.
+
+Install using `npm install https://github.com/JordanSchlick/noVNC-esm.git` and import with `import RFB from "novnc-esm"`
+
+The only difference between this fork and the main repository is that the package.json has been updated to support ESM.
+
 ### Description
 
 noVNC is both a HTML VNC client JavaScript library and an application built on
